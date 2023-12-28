@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #222831;
+}
+
+.header-container {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+.header-container h3 {
+  font-size: 2rem;
+  color: white;
+  flex: 1;
+}
+
+.search-bar-container {
+  display: flex;
+  flex: 2;
+}
+
+.material-icons {
+  color: white;
+}
+
+.search-bar-container .search-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2.5em;
+  border-radius: 0 10px 10px 0;
+  border-style: none;
+  background-color: #22312b;
+}
+
+.search-bar-container .search-button:hover {
+  background-color: #1d2723;
+  cursor: pointer;
+}
+
+.search-bar-container .search-input {
+  height: 2.5em;
+  width: 50%;
+  border-radius: 10px 0 0 10px;
+  border-style: none;
+  padding-left: 1rem;
+}
+
+.header-container > .avatar {
+  max-width: 3rem;
+  max-height: 3rem;
+  border-radius: 50%;
+  object-fit: contain;
+}
