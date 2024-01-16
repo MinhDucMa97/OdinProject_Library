@@ -8,8 +8,6 @@
 }
 
 body {
-  display: flex;
-  flex-direction: column;
   background-color: #222831;
 }
 
@@ -57,6 +55,8 @@ body {
   border-radius: 10px 0 0 10px;
   border-style: none;
   padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: 0.9rem;
 }
 
 .header-container > .avatar {
@@ -64,4 +64,109 @@ body {
   max-height: 3rem;
   border-radius: 50%;
   object-fit: contain;
+}
+
+/*Main*/
+
+main .add-button {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+main > .material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 700, "GRAD" 0, "opsz" 15;
+}
+
+.main-container > #popupForm {
+  padding: 1ch;
+  border-radius: 0.5rem;
+  border-style: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 400px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+form > .form-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+form > fieldset {
+  border: none;
+  outline: none;
+  position: relative;
+}
+
+form > .input-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.input-section > .input-field {
+  padding: 0.18rem 5px 0.18rem 5px;
+  font-size: 15px;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid silver;
+}
+
+.input-section > .label {
+  position: absolute;
+  top: 10px;
+  left: 0px;
+}
+
+form > .button-section {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+.button-section > button {
+  width: 100%;
+  max-width: 100px;
+  padding: 0.2rem 0.4rem;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  border-radius: 0.4rem;
+  outline: none;
+  border-width: thin;
+
+  transition: 0.25s ease-in-out;
+  position: relative;
+  z-index: 1;
+}
+
+.button-section > button:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.25);
+  z-index: -1;
+  transform: scale(0);
+  transition: transform 500ms ease-in;
+}
+
+.button-section > button:hover {
+  transform: scale(1.12);
+}
+
+.button-section > button:hover::after {
+  transform: scale(1);
 }

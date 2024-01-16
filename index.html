@@ -4,10 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
     <title>Minh Library</title>
   </head>
@@ -22,9 +26,73 @@
         </button>
       </div>
 
-      <img src="image/default-avatar.jpg" alt="default avatar" class="avatar" />
+      <img
+        src="image/3d-illustration-person-with-sunglasses_23-2149436188.jpg"
+        alt="default avatar"
+        class="avatar"
+      />
     </header>
-    <main class="main-container"></main>
+
+    <main class="main-container">
+      <div class="card-container"></div>
+      <button class="material-symbols-outlined add-button">add</button>
+
+      <dialog id="popupForm">
+        <form action="">
+          <h2 class="form-element form-header">New Book</h2>
+          <fieldset class="title-field input-section">
+            <label for="book-title" class="form-element">Book title</label>
+            <input
+              type="text"
+              id="book-title"
+              name="book-title"
+              class="form-element input-field"
+              placeholder="Title"
+            />
+          </fieldset>
+
+          <fieldset class="author-field input-section">
+            <label for="book-author" class="form-element">Book author</label>
+            <input
+              type="text"
+              name="book-author"
+              id="book-author"
+              class="form-element input-field"
+              placeholder="Author"
+            />
+          </fieldset>
+
+          <fieldset class="page-field input-section">
+            <label for="book-pages" class="form-element">Pages</label>
+            <input
+              type="text"
+              name="book-pages"
+              id="book-pages"
+              class="form-element input-field"
+              placeholder="Pages"
+            />
+          </fieldset>
+
+          <fieldset class="status-field checkbox-section">
+            <label for="book-status" class="form-element">Read</label>
+            <input
+              type="checkbox"
+              name="book-status"
+              id="book-status"
+              class="form-element checkbox-field"
+            />
+          </fieldset>
+
+          <fieldset class="button-section">
+            <button type="submit" class="form-element submit-button">
+              Add
+            </button>
+            <button class="close-button">Close</button>
+          </fieldset>
+        </form>
+      </dialog>
+    </main>
+
     <footer class="footer-container"></footer>
   </body>
 </html>
