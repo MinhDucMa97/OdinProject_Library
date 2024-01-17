@@ -41,11 +41,11 @@ body {
   padding: 0 2.5em;
   border-radius: 0 10px 10px 0;
   border-style: none;
-  background-color: #22312b;
+  background-color: #135e41;
 }
 
 .search-bar-container .search-button:hover {
-  background-color: #1d2723;
+  background-color: hsl(156, 73%, 10%);
   cursor: pointer;
 }
 
@@ -73,6 +73,9 @@ main .add-button {
   height: 3rem;
   border-radius: 50%;
   cursor: pointer;
+  position: absolute;
+  left: 95%;
+  top: 90%;
 }
 
 main > .material-symbols-outlined {
@@ -80,7 +83,7 @@ main > .material-symbols-outlined {
 }
 
 .main-container > #popupForm {
-  padding: 1ch;
+  padding: 4ch;
   border-radius: 0.5rem;
   border-style: hidden;
   top: 50%;
@@ -100,6 +103,7 @@ form > .form-header {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-transform: uppercase;
 }
 
 form > fieldset {
@@ -116,8 +120,8 @@ form > .input-section {
 }
 
 .input-section > .input-field {
-  padding: 0.18rem 5px 0.18rem 5px;
-  font-size: 15px;
+  padding: 0.15rem 0;
+  font-size: 1rem;
   border: none;
   outline: none;
   border-bottom: 2px solid silver;
@@ -129,6 +133,45 @@ form > .input-section {
   left: 0px;
 }
 
+.checkbox-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.checkbox-section > .checkbox-field {
+  appearance: none;
+  position: relative;
+  width: 7ch;
+  height: 30px;
+  border-radius: 25px;
+  background-color: #ccc;
+  transition: background 0.3s;
+  outline: none;
+  cursor: pointer;
+}
+
+.checkbox-field::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  height: 1.25rem;
+  width: 1.25rem;
+  background-color: white;
+  transition: left 0.3s;
+}
+
+.checkbox-field:checked {
+  background-color: hsl(120, 28%, 33%);
+}
+
+.checkbox-field:checked::after {
+  left: 70%;
+}
+
 form > .button-section {
   display: flex;
   justify-content: center;
@@ -138,12 +181,15 @@ form > .button-section {
 .button-section > button {
   width: 100%;
   max-width: 100px;
-  padding: 0.2rem 0.4rem;
+  padding: 0.28rem 0.4rem;
   font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
   text-transform: uppercase;
-  border-radius: 0.4rem;
+  border-radius: 0.45rem;
   outline: none;
-  border-width: thin;
+  border: none;
+  background-color: hsl(120, 42%, 24%);
+  color: hsl(0, 0%, 90%);
 
   transition: 0.25s ease-in-out;
   position: relative;
@@ -159,8 +205,9 @@ form > .button-section {
   height: 100%;
   background: rgba(0, 0, 0, 0.25);
   z-index: -1;
-  transform: scale(0);
-  transition: transform 500ms ease-in;
+  transform: scaleX(0);
+  transition: transform 300ms ease-in;
+  transform-origin: left;
 }
 
 .button-section > button:hover {
@@ -168,5 +215,5 @@ form > .button-section {
 }
 
 .button-section > button:hover::after {
-  transform: scale(1);
+  transform: scaleX(1);
 }
