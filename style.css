@@ -23,6 +23,7 @@ body {
   font-size: 2rem;
   color: white;
   flex: 1;
+  letter-spacing: 2px;
 }
 
 .search-bar-container {
@@ -41,7 +42,7 @@ body {
   padding: 0 2.5em;
   border-radius: 0 10px 10px 0;
   border-style: none;
-  background-color: #135e41;
+  background-color: hsl(120, 42%, 24%);
 }
 
 .search-bar-container .search-button:hover {
@@ -54,6 +55,7 @@ body {
   width: 50%;
   border-radius: 10px 0 0 10px;
   border-style: none;
+  outline: none;
   padding-left: 1rem;
   padding-right: 1rem;
   font-size: 0.9rem;
@@ -69,13 +71,13 @@ body {
 /*Main*/
 
 main .add-button {
-  width: 3rem;
-  height: 3rem;
+  width: 4rem;
+  height: 4rem;
   border-radius: 50%;
   cursor: pointer;
   position: absolute;
-  left: 95%;
-  top: 90%;
+  left: 92%;
+  top: 92%;
 }
 
 main > .material-symbols-outlined {
@@ -91,6 +93,21 @@ main > .material-symbols-outlined {
   transform: translate(-50%, -50%);
   width: 80%;
   max-width: 400px;
+  box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.35) inset;
+}
+
+#popupForm[open] {
+  animation: fade-in 0.5s ease-in forwards;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 form {
@@ -104,6 +121,7 @@ form > .form-header {
   align-items: center;
   justify-content: center;
   text-transform: uppercase;
+  letter-spacing: 1rem;
 }
 
 form > fieldset {
@@ -115,7 +133,7 @@ form > fieldset {
 form > .input-section {
   display: flex;
   flex-direction: column;
-  gap: 0.2rem;
+  gap: 0.8rem;
   font-family: "Poppins", sans-serif;
 }
 
@@ -127,10 +145,16 @@ form > .input-section {
   border-bottom: 2px solid silver;
 }
 
-.input-section > .label {
-  position: absolute;
-  top: 10px;
-  left: 0px;
+.input-section > .input-field::placeholder {
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+.input-section > label,
+.checkbox-section > label {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
 }
 
 .checkbox-section {
@@ -181,9 +205,10 @@ form > .button-section {
 .button-section > button {
   width: 100%;
   max-width: 100px;
-  padding: 0.28rem 0.4rem;
+  padding: 0.4rem 0.5rem;
   font-family: "Poppins", sans-serif;
-  font-size: 0.9rem;
+  font-size: 1rem;
+  letter-spacing: 2px;
   text-transform: uppercase;
   border-radius: 0.45rem;
   outline: none;
