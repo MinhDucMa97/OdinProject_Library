@@ -70,6 +70,27 @@ body {
 
 /*Main*/
 
+main .card-container {
+  display: grid;
+  grid-template: auto 1fr 1fr 1fr / repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 2rem 1rem;
+  height: 100%;
+  padding: 1rem;
+}
+
+.card-container > .card-element {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 2rem;
+  width: 350px;
+  max-width: 350px;
+  height: 300px;
+  border-radius: 1rem;
+  background-color: white;
+}
+
 main .add-button {
   width: 4rem;
   height: 4rem;
@@ -94,6 +115,10 @@ main > .material-symbols-outlined {
   width: 80%;
   max-width: 400px;
   box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.35) inset;
+}
+
+#popupForm::backdrop {
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 #popupForm[open] {
@@ -219,6 +244,7 @@ form > .button-section {
   transition: 0.25s ease-in-out;
   position: relative;
   z-index: 1;
+  cursor: pointer;
 }
 
 .button-section > button:after {
