@@ -35,7 +35,7 @@
 
     <main class="main-container">
       <div class="card-container">
-        <div class="card-element">
+        <!-- <div class="card-element">
           <div class="book-title">
             The Little Book of Common Sense Investing
           </div>
@@ -43,36 +43,7 @@
           <div class="book-pages">304</div>
           <div class="book-status">Read</div>
           <button class="remove-btn">Delete</button>
-        </div>
-
-        <div class="card-element">
-          <div class="book-title">
-            The Little Book of Common Sense Investing
-          </div>
-          <div class="book-author">John C. Bogle</div>
-          <div class="book-pages">304</div>
-          <div class="book-status">Read</div>
-          <button class="remove-btn">Delete</button>
-        </div>
-
-        <div class="card-element">
-          <div class="book-title">
-            The Little Book of Common Sense Investing
-          </div>
-          <div class="book-author">John C. Bogle</div>
-          <div class="book-pages">304</div>
-          <div class="book-status">Read</div>
-          <button class="remove-btn">Delete</button>
-        </div>
-        <div class="card-element">
-          <div class="book-title">
-            The Little Book of Common Sense Investing
-          </div>
-          <div class="book-author">John C. Bogle</div>
-          <div class="book-pages">304</div>
-          <div class="book-status">Read</div>
-          <button class="remove-btn">Delete</button>
-        </div>
+        </div> -->
       </div>
 
       <button class="material-symbols-outlined add-button">add</button>
@@ -124,7 +95,11 @@
           </fieldset>
 
           <fieldset class="button-section">
-            <button type="submit" class="form-element submit-button">
+            <button
+              type="submit"
+              class="form-element submit-button"
+              onclick="submitForm(event)"
+            >
               Add
             </button>
             <button class="form-element close-button">Close</button>
