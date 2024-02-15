@@ -67,6 +67,16 @@ function deleteBook(index) {
   displayBooks();
 }
 
+function toggleBookStatus(index) {
+  booksArray.forEach((book) => {
+    if (book.index === index) {
+      book.bookStatus = book.bookStatus === "Unread" ? "Read" : "Unread";
+    }
+  });
+
+  displayBooks();
+}
+
 function displayBooks() {
   let cardContainer = document.querySelector(".card-container");
 
@@ -92,6 +102,16 @@ function displayBooks() {
     bookStatus.className = "book-status";
     bookStatus.textContent = book.bookStatus;
 
+    let cardButtonSection = document.createElement("div");
+    cardButtonSection.className = "card-button-section";
+
+    let bookStatusToggleBtn = document.createElement("button");
+    bookStatusToggleBtn.className = "bookStatus-toggle-btn";
+    bookStatusToggleBtn.textContent = "Toggle Status";
+    bookStatusToggleBtn.addEventListener("click", () => {
+      toggleBookStatus(book.index);
+    });
+
     let singleBookRemoveBtn = document.createElement("button");
     singleBookRemoveBtn.className = "remove-btn";
     singleBookRemoveBtn.textContent = "Delete";
@@ -99,11 +119,14 @@ function displayBooks() {
       deleteBook(book.index);
     });
 
+    cardButtonSection.appendChild(bookStatusToggleBtn);
+    cardButtonSection.appendChild(singleBookRemoveBtn);
+
     card.appendChild(bookTitle);
     card.appendChild(bookAuthor);
     card.appendChild(bookPages);
     card.appendChild(bookStatus);
-    card.appendChild(singleBookRemoveBtn);
+    card.appendChild(cardButtonSection);
 
     cardContainer.appendChild(card);
   });

@@ -93,16 +93,18 @@ main .card-container {
   background-color: white;
 }
 
-.card-element > .remove-btn {
+.card-button-section > .remove-btn,
+.bookStatus-toggle-btn {
   font-size: 1rem;
   color: white;
   text-transform: uppercase;
   padding: 0.4rem 1.5rem;
+  margin: 0 5px;
   border-radius: 0.4rem;
   border-style: none;
   background-color: #572357;
   font-family: "Poppins", sans-serif;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   cursor: pointer;
 
   transition: 500ms ease-in-out;
@@ -111,7 +113,8 @@ main .card-container {
   cursor: pointer;
 }
 
-.card-element > .remove-btn:after {
+.card-button-section > .remove-btn:after,
+.bookStatus-toggle-btn:after {
   content: "";
   position: absolute;
   top: 0;
@@ -125,11 +128,13 @@ main .card-container {
   transform-origin: left;
 }
 
-.card-element > .remove-btn:hover {
+.card-button-section > .remove-btn:hover,
+.bookStatus-toggle-btn:hover {
   transform: scale(1.12);
 }
 
-.card-element > .remove-btn:hover::after {
+.card-button-section > .remove-btn:hover::after,
+.bookStatus-toggle-btn::after {
   transform: scaleX(1);
 }
 
